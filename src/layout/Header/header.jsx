@@ -6,8 +6,7 @@ import { IoSearch } from "react-icons/io5";
 import { SlBasketLoaded } from "react-icons/sl";
 
 const Header = () => {
-
-  const nav = useNavigate()
+  const nav = useNavigate();
   return (
     <div id="header">
       <div className="container">
@@ -15,7 +14,7 @@ const Header = () => {
           <img src={logo} alt="" onClick={() => nav("/")} />
           <div className="header--nav">
             <Link to={"/"}>Home</Link>
-            <Link>About</Link>
+            <Link to={"/about"}>About</Link>
             <Link>
               Pages{" "}
               <span>

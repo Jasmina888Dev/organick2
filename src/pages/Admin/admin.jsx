@@ -11,15 +11,16 @@ const Admin = () => {
 
   async function getAdmin() {
     let newProduct = {
-      url: proUrl,
-      name: proName,
-      des: proDes,
+      image: proUrl,
+      title: proName,
+      description: proDes,
       price: proPrice,
+      category: proKategory,
       rating: proRating,
-      kategory: proKategory,
     };
+
     axios.post(
-      `https://api-crud.elcho.dev/api/v1/f2073-3a725-0a2d9/organick`,
+      `https://6808b873942707d722df6f9b.mockapi.io/api/v1/organick`,
       newProduct
     );
     setProUrl("");
@@ -30,9 +31,6 @@ const Admin = () => {
     setProRating("");
   }
 
-  useEffect(() => {
-    getAdmin();
-  }, []);
   return (
     <div id="admin">
       <div className="container">
