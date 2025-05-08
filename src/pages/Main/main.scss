@@ -1,0 +1,328 @@
+#main {
+  .main--bg {
+    width: 100%;
+    height: clamp(20rem, 40vw, 90rem);
+    margin-bottom: clamp(1rem, 5.4vw, 10rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      color: #1e4a5f;
+      font-family: sans-serif;
+      font-weight: 800;
+      font-size: clamp(0.3rem, 2.4vw, 10rem);
+      margin: clamp(1rem, 2vw, 10rem) 0;
+    }
+    button {
+      padding: clamp(0.3rem, 1vw, 10rem) clamp(0.3rem, 1.5vw, 10rem);
+      background: rgba(239, 211, 114, 1);
+      color: #1e4a5f;
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 1vw, 10rem);
+      border: none;
+      border-radius: 10px;
+    }
+  }
+  .mainBanner {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 5.4vw, 10rem);
+    img {
+      width: clamp(7rem, 35vw, 40rem);
+    }
+  }
+  .main {
+    &--block1 {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.3rem, 0.3vw, 5rem);
+      margin-bottom: clamp(2rem, 10vw, 12rem);
+      margin-top: clamp(2rem, 8vw, 10rem);
+      &__text {
+        h1 {
+          font-family: sans-serif;
+          font-weight: 800;
+          font-size: clamp(0.2rem, 1.8vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          margin: clamp(0.2rem, 1vw, 2rem) 0;
+        }
+        p {
+          font-family: sans-serif;
+          font-weight: 400;
+          font-size: clamp(0.1rem, 1vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          line-height: clamp(0.1rem, 1.2vw, 2rem);
+        }
+
+        &--card {
+          display: flex;
+          margin-top: clamp(0.2rem, 1vw, 2rem);
+          h5 {
+            display: flex;
+            align-items: center;
+            span {
+              font-family: sans-serif;
+              font-weight: 500;
+              font-size: clamp(0.2rem, 1vw, 4rem);
+              padding-left: 10px;
+            }
+            margin: 0 clamp(0.2rem, 1vw, 2rem) 0 0;
+          }
+        }
+        button {
+          padding: clamp(0.1rem, 1vw, 2rem) clamp(1rem, 1.5vw, 22rem);
+          background: rgba(39, 76, 91, 1);
+          display: flex;
+          align-items: center;
+          color: white;
+          border: none;
+          border-radius: 13px;
+          margin-top: clamp(0.2rem, 1vw, 2rem);
+          font-size: clamp(0.2rem, 1vw, 2rem);
+        }
+      }
+    }
+
+    &--block2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(1rem, 2vw, 10rem);
+      flex-direction: column;
+      h1 {
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: clamp(0.8rem, 3vw, 2rem);
+        color: rgba(39, 76, 91, 1);
+        text-align: center;
+        margin-bottom: clamp(0.2rem, 1.8vw, 2rem);
+      }
+      .btn {
+        button {
+          padding: clamp(0.1rem, 1vw, 2rem) clamp(1rem, 1.5vw, 22rem);
+          background: rgba(39, 76, 91, 1);
+          display: flex;
+          align-items: center;
+          color: white;
+          border: none;
+          border-radius: 13px;
+          margin-top: clamp(0.2rem, 1vw, 2rem);
+          font-size: clamp(0.2rem, 0.8vw, 2rem);
+        }
+      }
+      &__cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: clamp(1rem, 4vw, 10rem);
+      }
+    }
+  }
+  .main--block3 {
+    width: 100%;
+    height: clamp(20rem, 60vw, 90rem);
+    margin: clamp(7rem, 10vw, 40rem) 0;
+    font-family: sans-serif;
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: clamp(0.1%, 0.1%, 5rem);
+      background-color: transparent;
+      border-radius: 10px;
+      margin: clamp(7rem, 10vw, 40rem) 0;
+
+      .rating {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        .star {
+          width: clamp(0.8rem, 1.5vw, 9rem);
+          height: clamp(0.8rem, 1.5vw, 9rem);
+          background-color: gold;
+          clip-path: polygon(
+            50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%
+          );
+          margin: clamp(0.3rem, 0.5vw, 9rem) clamp(0.3rem, 0.5vw, 9rem);
+        }
+      }
+
+      h1 {
+        font-size: clamp(0.5rem, 2vw, 9rem);
+        color: #1e4a5f;
+        margin-top: clamp(0.5rem, 1vw, 9rem);
+      }
+
+      p {
+        color: #4c4c4c;
+        font-size: clamp(0.2rem, 1vw, 5rem);
+        margin: clamp(0.1rem, 0.6vw, 9rem) 0;
+        line-height: clamp(0.2rem, 2vw, 9rem);
+      }
+
+      h4 {
+        font-size: clamp(0.2rem, 1.3vw, 9rem);
+        color: #1e4a5f;
+        font-weight: 600;
+      }
+
+      .consumer {
+        font-size: clamp(0.2rem, 1.3vw, 9rem);
+        margin: clamp(0.2rem, 0.8vw, 9rem);
+        color: #7a7a7a;
+      }
+
+      .divider {
+        margin: clamp(0.2rem, 0.5vw, 9rem);
+        color: #8ba5b1;
+        font-size: clamp(0.3rem, 1.2vw, 9rem);
+        display: flex;
+        align-items: center;
+        gap: clamp(0.3rem, 1vw, 9rem);
+      }
+      .divider h3:hover {
+        color: #1e4a5f;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: clamp(0.2rem, 1vw, 9rem);
+        width: 100%;
+        font-size: clamp(0.3rem, 1.2vw, 9rem);
+        .stat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: clamp(0.8rem, 8vw, 12rem);
+          height: clamp(0.8rem, 8vw, 12rem);
+          border-radius: 50%;
+          background: rgba(241, 241, 241, 1);
+          font-size: clamp(0.3rem, 1vw, 5rem);
+          border: 3px solid rgba(126, 182, 147, 1);
+          .stat-number {
+            font-weight: bold;
+            color: #1e4a5f;
+          }
+        }
+      }
+    }
+  }
+  .main--block4 {
+    width: 100%;
+    height: clamp(7rem, 45vw, 90rem);
+    background: rgba(39, 76, 91, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+      display: flex;
+      align-items: end;
+
+      justify-content: space-between;
+      h1 {
+        color: white;
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: clamp(0.3rem, 2.4vw, 10rem);
+      }
+      button {
+        padding: clamp(0.3rem, 1vw, 10rem) clamp(0.3rem, 1.5vw, 10rem);
+        background: rgba(239, 211, 114, 1);
+        color: #1e4a5f;
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 1vw, 10rem);
+        border: none;
+        border-radius: 10px;
+      }
+    }
+    &__text25 {
+      margin-top: clamp(0.3rem, 8vw, 10rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: clamp(1rem, 6vw, 10rem);
+      overflow-y: scroll;
+      height: clamp(7rem, 20vw, 90rem);
+    }
+  }
+  .main--block5 {
+    position: relative;
+    &__store {
+      width: clamp(10rem, 35vw, 80rem);
+      height: clamp(10rem, 35vw, 80rem);
+      background: rgba(255, 255, 255, 1);
+      position: absolute;
+      top: clamp(0.6rem, 10vw, 40rem);
+      right: clamp(0.4rem, 20vw, 40rem);
+      border-radius: 20px;
+      padding: clamp(2rem, 4vw, 8rem) clamp(2rem, 4vw, 8rem);
+      h1 {
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: clamp(0.2rem, 1.8vw, 2rem);
+        color: rgba(39, 76, 91, 1);
+        margin: clamp(0.2rem, 1vw, 2rem) 0;
+      }
+      h4 {
+        span {
+          font-family: sans-serif;
+          font-weight: 600;
+          font-size: clamp(0.2rem, 1vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+        }
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: clamp(0.2rem, 1vw, 2rem);
+        color: rgba(82, 92, 96, 1);
+        margin-bottom: clamp(2rem, 2vw, 8rem);
+      }
+    }
+  }
+  .main--block6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(20rem, 40vw, 90rem);
+    background: rgba(241, 248, 244, 1);
+    gap: clamp(0.3rem, 7vw, 5rem);
+
+    &__cards1 {
+      height: clamp(10rem, 25vw, 80rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        padding: clamp(0.1rem, 1vw, 2rem) clamp(1rem, 1.5vw, 22rem);
+        background: white;
+        display: flex;
+        align-items: center;
+        color: #1e4a5f;
+        border: none;
+        border-radius: 13px;
+        margin-top: clamp(0.2rem, 1vw, 2rem);
+        font-size: clamp(0.2rem, 1vw, 2rem);
+      }
+    }
+  }
+}

@@ -4,13 +4,16 @@ import Footer from "./layout/Footer/footer";
 import Header from "./layout/Header/header";
 import Admin from "./pages/Admin/admin";
 import About from "./pages/About/about";
+import Shop from "./pages/Shop/shop";
+import Product from "./ui/Product/product";
+import Main from "./pages/Main/main";
 
 function App() {
   let route = [
     {
       id: 1,
       path: "/",
-      element: "",
+      element: <Main/>
     },
     {
       id: 2,
@@ -22,6 +25,12 @@ function App() {
       path: "/about",
       element: <About />,
     },
+    {
+      id: 3,
+      path: "/shop",
+      element: <Shop />,
+    },
+   
   ];
 
   return (

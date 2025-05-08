@@ -22,7 +22,7 @@ const Header = () => {
                 <GoChevronDown />
               </span>
             </Link>
-            <Link>Shop</Link>
+            <Link to={"/shop"}>Shop</Link>
             <Link>Project</Link>
             <Link to={"/admin"}>Admin</Link>
           </div>
