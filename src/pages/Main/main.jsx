@@ -9,7 +9,7 @@ import icon1 from "../../assets/images/Icon1.svg";
 import icon2 from "../../assets/images/Icon2.svg";
 import icon4 from "../../assets/images/Icon4.svg";
 import Product from "../../ui/Product/product";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaUserAlt } from "react-icons/fa";
 import axios from "axios";
 import BackgroundMain from "../../assets/images/BackgroundMain.png";
 import icon6 from "../../assets/images/icon6.svg";
@@ -23,11 +23,19 @@ import bag2 from "../../assets/images/2.png";
 import bag3 from "../../assets/images/3.jpg";
 import Group from "../../assets/images/Group.png";
 import icon9 from "../../assets/images/Icon9.svg";
+import icon10 from "../../assets/images/Icon10.png";
+import PhotoGreen from "../../assets/images/PhotoGreen.png";
+import PhotoRed from "../../assets/images/PhotoRed.png";
+import newPhoto from "../../assets/images/NewImg.png";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Main = () => {
   const [count, setCount] = useState(4);
   const [count1, setCount1] = useState(4);
   const [product, setProduct] = useState([]);
+  // const {products, setProducts}
 
   async function getShop() {
     let res = await axios(
@@ -37,8 +45,36 @@ const Main = () => {
     setProduct(data);
   }
 
+  const allCategories = [
+    {
+      id: 1,
+      title: "Vegetable",
+      img: "https://img.pikbest.com/png-images/20240830/3d-vegetables-a-clean-and-modern-presentation_10777794.png!bw700",
+    },
+    {
+      id: 2,
+      title: "Fresh",
+      img: "https://png.pngtree.com/png-clipart/20240314/original/pngtree-3d-fruit-fresh-png-image_14591543.png",
+    },
+    {
+      id: 3,
+      title: "Nuts",
+      img: "https://png.pngtree.com/png-vector/20250327/ourmid/pngtree-3d-a-mixed-nuts-displayon-realistic-png-image_15887028.png",
+    },
+    {
+      id: 4,
+      title: "Health",
+      img: "https://png.pngtree.com/png-vector/20241203/ourmid/pngtree-buckwheat-png-image_14647414.png",
+    },
+  ];
+
   useEffect(() => {
     getShop();
+
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
   }, []);
   return (
     <div id="main">
@@ -63,8 +99,8 @@ const Main = () => {
       </div>
       <div className="container">
         <div className="mainBanner">
-          <img src={mainBanner1} alt="img" />
-          <img src={mainBanner2} alt="img" />
+          <img src={mainBanner1} alt="img" data-aos="fade-right" />
+          <img src={mainBanner2} alt="img" data-aos="fade-left" />
         </div>
         <div className="main">
           <div className="main--block1">
@@ -129,6 +165,20 @@ const Main = () => {
             </div>
           </div>
 
+          <div className="main--blockCategories">
+            <h1>Categories</h1>
+            <div className="main--blockCategories__card">
+              {allCategories.map((el) => (
+                <div className="main--blockCategories__card--text">
+                  <Link to={`/category/${el.title}`}>
+                    <img src={el.img} alt="img" />
+                  </Link>
+                  <h2>{el.title}</h2>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="main--block2">
             <img
               src={icon4}
@@ -141,7 +191,7 @@ const Main = () => {
 
             <div className="main--block2__cards">
               {product.slice(0, count).map((el) => (
-                <Product product={el} />
+                <Product product={el} key={el.id} />
               ))}
             </div>
 
@@ -226,7 +276,13 @@ const Main = () => {
         <div className="container">
           <div className="main--block4__title">
             <h1>
-              <img src={icon7} alt="" />
+              <img
+                src={icon7}
+                alt=""
+                style={{
+                  width: "clamp(1rem, 6vw, 50rem)",
+                }}
+              />
               <br />
               <span> We Offer Organic For You</span>
             </h1>
@@ -236,7 +292,7 @@ const Main = () => {
           </div>
           <div className="main--block4__text25">
             {product.slice(0, count1).map((el) => (
-              <Product product={el} />
+              <Product product={el} key={el.id} />
             ))}
           </div>
         </div>
@@ -316,6 +372,105 @@ const Main = () => {
         >
           <button>Nuts Cookis</button>
         </div>
+      </div>
+
+      <div className="container">
+        <div className="main--block7">
+          <div className="main--block7__text">
+            <h2>
+              <img
+                src={icon10}
+                alt="img"
+                style={{
+                  width: "clamp(2rem, 7vw, 50rem)",
+                }}
+              />
+              <span>
+                Discover weekly content about <br /> organic food, & more
+              </span>
+            </h2>
+            <button>
+              More News <FaCircleArrowRight />
+            </button>
+          </div>
+
+          <div className="main--block7__cards">
+            <div
+              className="main--block7__cards--card1"
+              style={{
+                backgroundImage: `url(${PhotoGreen})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="main--block7__cards--card1__btn25">
+                <button>
+                  25 <br /> Nov
+                </button>
+              </div>
+              <div className="main--block7__cards--card1__cirkle">
+                <h4>
+                  <FaUserAlt />
+                  <span> By Rachi Card</span>
+                </h4>
+                <h2>
+                  The Benefits of Vitamin D & How to Get It <br />
+                  <span>
+                    {" "}
+                    Simply dummy text of the printing and typesetting <br />{" "}
+                    industry. Lorem Ipsum
+                  </span>
+                </h2>
+                <button>
+                  Read More <FaCircleArrowRight />
+                </button>
+              </div>
+            </div>
+            <div
+              className="main--block7__cards--card1"
+              style={{
+                backgroundImage: `url(${PhotoRed})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <div className="main--block7__cards--card1__btn25">
+                <button>
+                  25 <br /> Nov
+                </button>
+              </div>
+              <div className="main--block7__cards--card1__cirkle">
+                <h4>
+                  <FaUserAlt />
+                  <span> By Rachi Card</span>
+                </h4>
+                <h2>
+                  The Benefits of Vitamin D & How to Get It <br />
+                  <span>
+                    {" "}
+                    Simply dummy text of the printing and typesetting <br />{" "}
+                    industry. Lorem Ipsum
+                  </span>
+                </h2>
+                <button>
+                  Read More <FaCircleArrowRight />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="main--block8"
+          style={{
+            backgroundImage: `url(${newPhoto})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            margin: "0 auto",
+          }}
+        ></div>
       </div>
     </div>
   );

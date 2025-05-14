@@ -5,15 +5,19 @@ import Header from "./layout/Header/header";
 import Admin from "./pages/Admin/admin";
 import About from "./pages/About/about";
 import Shop from "./pages/Shop/shop";
-import Product from "./ui/Product/product";
-import Main from "./pages/Main/main";
+import Details from "./pages/Details/details";
+import NotFound from "./pages/Notfound/notFound";
+import Contact from "./pages/Contact/contact";
+import Basket from "./pages/Basket/bakset";
+import Category from "./pages/Category/category";
+import Main from "./pages/Main/Main";
 
 function App() {
   let route = [
     {
       id: 1,
       path: "/",
-      element: <Main/>
+      element: <Main />,
     },
     {
       id: 2,
@@ -21,16 +25,40 @@ function App() {
       element: <Admin />,
     },
     {
-      id: 2,
+      id: 3,
       path: "/about",
       element: <About />,
     },
     {
-      id: 3,
+      id: 4,
       path: "/shop",
       element: <Shop />,
     },
-   
+    {
+      id: 5,
+      path: "/details/:Id",
+      element: <Details />,
+    },
+    {
+      id: 6,
+      path: "/*",
+      element: <NotFound />,
+    },
+    {
+      id: 7,
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
+      id: 8,
+      path: "/basket",
+      element: <Basket />,
+    },
+    {
+      id: 9,
+      path: "/category/:categoryId",
+      element: <Category />,
+    },
   ];
 
   return (

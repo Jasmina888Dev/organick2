@@ -46,6 +46,7 @@ const Shop = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              marginBottom: "50px",
             }}
           ></div>
         </div>

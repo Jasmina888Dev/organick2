@@ -17,6 +17,7 @@ const Admin = () => {
       price: proPrice,
       category: proKategory,
       rating: proRating,
+      quantity: 1,
     };
 
     axios.post(
@@ -64,16 +65,18 @@ const Admin = () => {
             />
             <input
               type="text"
-              placeholder="product kategory"
-              onChange={(e) => setProKategory(e.target.value)}
-              value={proKategory}
-            />
-            <input
-              type="text"
               placeholder="product rating"
               onChange={(e) => setProRating(e.target.value)}
               value={proRating}
             />
+            <select onChange={(e) => setProKategory(e.target.value)}>
+              <option value="">Category</option>
+              <option value="Vegetable">Vegetable</option>
+              <option value="Fresh">Fresh</option>
+              <option value="Millets">Millets</option>
+              <option value="Nuts">Nuts</option>
+              <option value="Health">Health</option>
+            </select>
           </div>
           <button onClick={() => getAdmin()}>save</button>
         </div>

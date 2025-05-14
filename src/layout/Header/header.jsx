@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/images/Logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { GoChevronDown } from "react-icons/go";
 import { IoSearch } from "react-icons/io5";
 import { SlBasketLoaded } from "react-icons/sl";
+import { ProductContext } from "../../context/context";
 
 const Header = () => {
   const nav = useNavigate();
+  const { basket } = useContext(ProductContext);
   return (
     <div id="header">
       <div className="container">
@@ -23,8 +25,9 @@ const Header = () => {
               </span>
             </Link>
             <Link to={"/shop"}>Shop</Link>
-            <Link>Project</Link>
+            <Link to={"/contact"}>Contact</Link>
             <Link to={"/admin"}>Admin</Link>
+            {/* <Link to={"/basket"}>Basket</Link> */}
           </div>
           <div className="header--right">
             <div className="header--right__input">
@@ -34,10 +37,10 @@ const Header = () => {
               </a>
             </div>
             <div className="header--right__cart">
-              <a>
+              <Link to={"/basket"}>
                 <SlBasketLoaded />
-              </a>
-              <h2>Cart (0)</h2>
+              </Link>
+              <h2>Cart ({basket.length})</h2>
             </div>
           </div>
         </div>

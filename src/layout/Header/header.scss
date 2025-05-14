@@ -1,10 +1,15 @@
 #header {
   padding: clamp(0.1rem, 1vw, 8rem) 0;
-  margin-bottom: clamp(2rem, 4vw, 10rem);
+  margin-bottom: clamp(1rem, 2vw, 10rem);
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  backdrop-filter: blur(7px);
+
   .header {
     display: flex;
     align-items: center;
-    gap: clamp(0.5rem, 7vw, 10rem);
+    gap: clamp(0.5rem, 9vw, 10rem);
     img {
       width: clamp(1.3rem, 12vw, 15rem);
     }
@@ -14,7 +19,7 @@
       gap: clamp(0.1rem, 1vw, 2rem);
       a {
         font-weight: 700;
-        font-size: clamp(0.5rem, 1.2vw, 4rem);
+        font-size: clamp(0.5rem, 1vw, 4rem);
         color: rgba(39, 76, 91, 1);
         font-family: sans-serif;
       }
