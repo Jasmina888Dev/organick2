@@ -6,6 +6,7 @@ import NewImg from "../../assets/images/NewImg.png";
 
 const Shop = () => {
   const [product, setProduct] = useState([]);
+  const [count, setCount] = useState(4)
 
   async function getShop() {
     let res = await axios(
@@ -34,9 +35,10 @@ const Shop = () => {
       <div className="container">
         <div className="shop">
           <div className="shop--block1">
-            {product.slice(0, 8).map((el) => (
+            {product.slice(0, count).map((el) => (
               <Product product={el} />
             ))}
+            <h6 onClick={() => setCount(count+4)}>click me</h6>
           </div>
 
           <div

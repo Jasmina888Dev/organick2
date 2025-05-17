@@ -1,11 +1,75 @@
 #basket {
+  padding: 20px 0;
   .basket {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 
     &--content {
-        
+      width: 700px;
+      height: 400px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      overflow-y: scroll;
+      &__block {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid black;
+        border-radius: 15px;
+        margin-bottom: 10px;
+        a {
+          margin-right: 8px;
+          font-size: 25px;
+          color: red;
+        }
+        h1 {
+          margin: clamp(0.2rem, 1vw, 4rem) 0;
+          font-family: sans-serif;
+          font-weight: 800;
+          font-size: clamp(0.2rem, 1.5vw, 4rem);
+          line-height: 100%;
+          letter-spacing: 0%;
+          color: #1e4a5f;
+        }
+        button {
+          padding: 5px 10px;
+          background: transparent;
+          border: 2px solid #212a2e;
+          border-radius: 10px;
+        }
+        &--count {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          h2 {
+            margin: clamp(0.2rem, 1vw, 4rem) 0;
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: clamp(0.2rem, 1vw, 4rem);
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #212a2e;
+          }
+          &__quantity {
+            display: flex;
+            align-items: center;
+            button {
+              padding: 0 6px;
+              background: #1e4a5f;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              -ms-border-radius: 5px;
+              -o-border-radius: 5px;
+            }
+          }
+        }
+      }
     }
 
     &--bar {

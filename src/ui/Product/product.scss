@@ -8,15 +8,15 @@
       display: flex;
       align-items: start;
       flex-direction: column;
-      width: clamp(7rem, 14vw, 40rem);
+      width: clamp(7rem, 15vw, 40rem);
       height: clamp(8rem, 20vw, 40rem);
       background: rgba(249, 248, 248, 1);
-      border-radius: clamp(1rem, 2.5vw, 4rem);
+      border-radius: clamp(1rem, 2vw, 4rem);
       position: relative;
       h5 {
         position: absolute;
-        top: 10px;
-        right: 0px;
+        top: 12px;
+        right: 4px;
         font-size: clamp(0.8rem, 1.8vw, 2rem);
         color: yellowgreen;
         cursor: pointer;

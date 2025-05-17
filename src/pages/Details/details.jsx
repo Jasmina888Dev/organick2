@@ -96,7 +96,8 @@ const Details = () => {
           </div>
           <div className="details--Related">
             {category.map(
-              (el) => el.title === details.title && <Product product={el} />
+              (el) =>
+                el.category === details.category && <Product product={el} />
             )}
           </div>
           <br />

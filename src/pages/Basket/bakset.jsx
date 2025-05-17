@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { ProductContext } from "../../context/context";
+import { TiDelete } from "react-icons/ti";
 
 const Basket = () => {
-  const { basket } = useContext(ProductContext);
+  const { basket, setBasket } = useContext(ProductContext);
 
-  // console.log(basket, "bakset");
+  function delPro(Id) {
+    let res = basket.filter((el) => {
+      return el.id !== Id;
+    });
+    setBasket(res);
+  }
+
+  useEffect(() => {
+    delPro(basket);
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <div id="basket">
@@ -25,6 +36,9 @@ const Basket = () => {
                   </div>
                 </div>
                 <button>{el.category}</button>
+                <a onClick={() => delPro(el.id)}>
+                  <TiDelete />
+                </a>
               </div>
             ))}
           </div>

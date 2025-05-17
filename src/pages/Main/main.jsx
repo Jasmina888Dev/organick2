@@ -70,7 +70,7 @@ const Main = () => {
 
   useEffect(() => {
     getShop();
-
+    window.scroll(0, 0);
     AOS.init({
       duration: 1500,
       once: true,
@@ -169,7 +169,10 @@ const Main = () => {
             <h1>Categories</h1>
             <div className="main--blockCategories__card">
               {allCategories.map((el) => (
-                <div className="main--blockCategories__card--text">
+                <div
+                  className="main--blockCategories__card--text"
+                  data-aos="zoom-in-down"
+                >
                   <Link to={`/category/${el.title}`}>
                     <img src={el.img} alt="img" />
                   </Link>
@@ -291,9 +294,11 @@ const Main = () => {
             </button>
           </div>
           <div className="main--block4__text25">
-            {product.slice(0, count1).map((el) => (
-              <Product product={el} key={el.id} />
-            ))}
+            {product
+              .slice(0, count1)
+              .map((el) =>
+                el.rating >= 4 ? <Product product={el} key={el.id} /> : null
+              )}
           </div>
         </div>
       </div>

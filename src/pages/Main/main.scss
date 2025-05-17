@@ -165,7 +165,7 @@
   }
   .main--block3 {
     width: 100%;
-    height: clamp(20rem, 60vw, 90rem);
+    height: clamp(20rem, 50vw, 90rem);
     margin: clamp(7rem, 10vw, 40rem) 0;
     font-family: sans-serif;
     &__cards {
@@ -302,7 +302,7 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: clamp(1rem, 6vw, 10rem);
+      gap: clamp(1rem, 4vw, 10rem);
       overflow-y: scroll;
       height: clamp(7rem, 20vw, 90rem);
     }

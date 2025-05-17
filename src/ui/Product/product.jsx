@@ -51,7 +51,7 @@ const Product = ({ product }) => {
                 }}
               />
             </Link>
-            <h2>{product.name}</h2>
+            <h2>{product.title}</h2>
             <hr />
             <div className="product--card__block--text">
               <div className="price">
